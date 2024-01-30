@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://coljc5fvh2ayt"]
+
+[ext_resource type="Script" path="res://Scenes/interactive_tile.gd" id="1_yrgo7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0dv8"]
+resource_local_to_scene = true
+
+[node name="InteractiveTile" type="Area2D"]
+script = ExtResource("1_yrgo7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+shape = SubResource("RectangleShape2D_q0dv8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

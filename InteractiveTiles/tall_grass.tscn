@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dctbwjndfn6bc"]
+
+[ext_resource type="Texture2D" uid="uid://cebv5tf43dsm7" path="res://Assets/Exteriors/tall_grass.png" id="1_if22n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bvuw"]
+size = Vector2(16, 16)
+
+[node name="TallGrass" type="Area2D"]
+z_index = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_if22n")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5bvuw")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctd6t7yo513q7"
-path="res://.godot/imported/stepped_tall_grass.png-7b7cae6ab0dd0cbfd2b23bd6783839de.ctex"
+uid="uid://bojiild62dh0c"
+path="res://.godot/imported/trees.png-4f4e00541ee31a7b7d4f63ef7ea179e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Exteriors/stepped_tall_grass.png"
-dest_files=["res://.godot/imported/stepped_tall_grass.png-7b7cae6ab0dd0cbfd2b23bd6783839de.ctex"]
+source_file="res://Assets/Exteriors/trees.png"
+dest_files=["res://.godot/imported/trees.png-4f4e00541ee31a7b7d4f63ef7ea179e1.ctex"]
 
 [params]
 

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 signal player_moving_signal
 signal player_stopped_signal
 
@@ -24,9 +26,6 @@ var percent_moved_to_next_tile = 0.0
 func _ready():
 	anim_tree.active = true
 	initial_position = position
-
-func is_character() -> bool:
-	return true
 
 func _physics_process(delta):
 	if player_state == PlayerState.TURNING:

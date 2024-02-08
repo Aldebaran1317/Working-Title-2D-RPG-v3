@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cksbwyhoxl0b6"
-path="res://.godot/imported/border.png-8a4d5f50089b0dcc2b4bd34be42cf22f.ctex"
+uid="uid://w3y7y12deyix"
+path="res://.godot/imported/dirt_anim.png-637aa9ddd3944327e233802a6fe949ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Exteriors/border.png"
-dest_files=["res://.godot/imported/border.png-8a4d5f50089b0dcc2b4bd34be42cf22f.ctex"]
+source_file="res://Assets/InteractiveTiles/dirt_anim.png"
+dest_files=["res://.godot/imported/dirt_anim.png-637aa9ddd3944327e233802a6fe949ed.ctex"]
 
 [params]
 

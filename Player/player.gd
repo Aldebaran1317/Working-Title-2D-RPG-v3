@@ -11,6 +11,7 @@ const TILE_SIZE = 16
 @onready var anim_tree = $AnimationTree
 @onready var anim_state = anim_tree.get("parameters/playback")
 @onready var ray = $RayCast2D
+@onready var front_check_box = $FrontCheck
 
 enum PlayerState { IDLE, TURNING, WALKING }
 enum FacingDirection { LEFT, RIGHT, UP, DOWN }
@@ -39,6 +40,21 @@ func _physics_process(delta):
 		anim_state.travel("Idle")
 		is_moving = false
 
+func change_front_check_position(dir):
+	match dir:
+		Vector2.UP:
+			front_check_box.position = Vector2(0, -32)
+			print_debug("up")
+		Vector2.RIGHT:	
+			front_check_box.position = Vector2(16, -16)
+			print_debug("right")
+		Vector2.DOWN:	
+			front_check_box.position = Vector2(0, 0)
+			print_debug("down")
+		Vector2.LEFT:	
+			front_check_box.position = Vector2(-16, -16)
+			print_debug("left")
+
 func process_player_input():
 	if input_direction.y == 0:
 		input_direction.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -48,6 +64,7 @@ func process_player_input():
 		anim_tree.set("parameters/Idle/blend_position", input_direction)
 		anim_tree.set("parameters/Walk/blend_position", input_direction)
 		anim_tree.set("parameters/Turn/blend_position", input_direction)
+		change_front_check_position(input_direction)
 		if need_to_turn():
 			player_state = PlayerState.TURNING
 			anim_state.travel("Turn")

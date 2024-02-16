@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bojtxfbohbh4d"]
+
+[ext_resource type="Texture2D" uid="uid://bxh83gmku7fl8" path="res://Assets/UI/box.png" id="1_njqys"]
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="DialogueBackground" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_right = 240.0
+grow_vertical = 0
+texture = ExtResource("1_njqys")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16

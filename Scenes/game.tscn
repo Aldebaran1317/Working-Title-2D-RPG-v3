@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bixy070hieoxy"]
+
+[ext_resource type="PackedScene" uid="uid://c0fo0sg5jt4hn" path="res://Scenes/town.tscn" id="1_wmn6a"]
+[ext_resource type="PackedScene" uid="uid://dt4p288asw0at" path="res://Player/player.tscn" id="2_xmsur"]
+[ext_resource type="PackedScene" uid="uid://u4sg1l4libgx" path="res://UI/ui.tscn" id="3_h2eef"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Town" parent="." instance=ExtResource("1_wmn6a")]
+
+[node name="Player" parent="Town" instance=ExtResource("2_xmsur")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(128, 112)
+
+[node name="UI" parent="." instance=ExtResource("3_h2eef")]

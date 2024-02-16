@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1evcmcykcxmy"]
+
+[ext_resource type="Texture2D" uid="uid://cebv5tf43dsm7" path="res://Assets/InteractiveTiles/interactive_tiles.png" id="3_7xf3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bvuw"]
+size = Vector2(16, 16)
+
+[node name="Sign" type="StaticBody2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(8, -8)
+texture = ExtResource("3_7xf3g")
+hframes = 8
+vframes = 8
+frame = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, -8)
+shape = SubResource("RectangleShape2D_5bvuw")

@@ -3,6 +3,7 @@ extends TileMap
 # add a function to debug mouse position on screen
 
 @onready var tall_grass_scene = preload("res://InteractiveTiles/tall_grass.tscn")
+@onready var sign_scene = preload("res://InteractiveTiles/signpost.tscn")
 var interactive_tiles_layer = 2
 
 func _ready():
@@ -19,6 +20,12 @@ func find_and_spawn_interactive_tiles():
 			var pos = map_to_local(tile_data[i])
 			tall_grass.position = Vector2(pos.x-8, pos.y+8)
 			add_child(tall_grass)
+		elif tile.get_custom_data("TileType") == "sign":
+			set_cell(interactive_tiles_layer,tile_data[i],-1)
+			var sign = sign_scene.instantiate()
+			var pos = map_to_local(tile_data[i])
+			sign.position = Vector2(pos.x-8, pos.y+8)
+			add_child(sign)
 		else: # if no matching rule
 			continue
 

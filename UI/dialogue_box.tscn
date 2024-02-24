@@ -11,6 +11,13 @@ offset_top = -40.0
 offset_right = 40.0
 grow_vertical = 0
 
+[node name="DialogueLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 232.0
+offset_bottom = 31.0
+
 [node name="DialogueBackground" type="NinePatchRect" parent="."]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 1

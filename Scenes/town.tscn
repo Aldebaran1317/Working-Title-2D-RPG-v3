@@ -1,6 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0fo0sg5jt4hn"]
+[gd_scene load_steps=10 format=3 uid="uid://c0fo0sg5jt4hn"]
 
 [ext_resource type="Texture2D" uid="uid://cs6jiw37e0n2b" path="res://Assets/Exteriors/exteriors.png" id="1_ufj2u"]
+[ext_resource type="PackedScene" uid="uid://dt4p288asw0at" path="res://Player/player.tscn" id="4_7v1h8"]
+[ext_resource type="PackedScene" uid="uid://b1evcmcykcxmy" path="res://InteractiveTiles/signpost.tscn" id="5_4hf4m"]
+[ext_resource type="PackedScene" uid="uid://u4sg1l4libgx" path="res://UI/ui.tscn" id="5_ec2yf"]
 [ext_resource type="Texture2D" uid="uid://cebv5tf43dsm7" path="res://Assets/InteractiveTiles/interactive_tiles.png" id="6_dt5l7"]
 [ext_resource type="Script" path="res://Scenes/OverworldTilemap.gd" id="7_tlsfh"]
 
@@ -203,6 +206,10 @@ sources/5 = SubResource("TileSetAtlasSource_7r4yw")
 z_index = 1
 y_sort_enabled = true
 
+[node name="Player" parent="." instance=ExtResource("4_7v1h8")]
+z_index = 1
+position = Vector2(176, 128)
+
 [node name="OverworldTilemap" type="TileMap" parent="."]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_5gyyl")
@@ -212,9 +219,15 @@ layer_0/tile_data = PackedInt32Array(0, 196609, 3, 65536, 196609, 0, 131072, 196
 layer_1/name = "non_interactive_tiles"
 layer_1/tile_data = PackedInt32Array(196613, 393217, 0, 327691, 393217, 0, 589837, 393217, 0, 458768, 393217, 0, 458759, 393217, 1, 131087, 393217, 1, 458773, 393217, 1)
 layer_2/name = "interactive_tiles"
-layer_2/tile_data = PackedInt32Array(262153, 5, 0, 196617, 5, 0, 196618, 5, 0, 262154, 5, 0, 196619, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 327693, 5, 0, 262164, 5, 0, 327700, 5, 0, 262165, 5, 0, 196629, 5, 0, 196630, 5, 0, 131076, 5, 0, 327681, 5, 0, 262145, 5, 0, 196612, 5, 0, 131077, 5, 0, 131086, 5, 0, 131094, 5, 0, 196631, 5, 0, 131095, 5, 0, 720914, 5, 0, 720913, 5, 0, 720912, 5, 0, 720908, 5, 0, 589831, 5, 0, 589832, 5, 0, 589833, 5, 0, 524296, 5, 0, 524297, 5, 0, 458755, 5, 0, 786446, 5, 0, 786447, 5, 0, 851982, 5, 0, 851983, 5, 0, 720907, 5, 0, 720906, 5, 0, 589829, 5, 0, 589828, 5, 0, 524292, 5, 0, 524293, 5, 0, 524294, 5, 0, 393219, 5, 0, 262144, 5, 0, 327680, 5, 0, 131075, 5, 0, 458766, 5, 2)
+layer_2/tile_data = PackedInt32Array(262153, 5, 0, 196617, 5, 0, 196618, 5, 0, 262154, 5, 0, 196619, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 327693, 5, 0, 262164, 5, 0, 327700, 5, 0, 262165, 5, 0, 196629, 5, 0, 196630, 5, 0, 131076, 5, 0, 327681, 5, 0, 262145, 5, 0, 196612, 5, 0, 131077, 5, 0, 131086, 5, 0, 131094, 5, 0, 196631, 5, 0, 131095, 5, 0, 720914, 5, 0, 720913, 5, 0, 720912, 5, 0, 720908, 5, 0, 589831, 5, 0, 589832, 5, 0, 589833, 5, 0, 524296, 5, 0, 524297, 5, 0, 458755, 5, 0, 786446, 5, 0, 786447, 5, 0, 851982, 5, 0, 851983, 5, 0, 720907, 5, 0, 720906, 5, 0, 589829, 5, 0, 589828, 5, 0, 524292, 5, 0, 524293, 5, 0, 524294, 5, 0, 393219, 5, 0, 262144, 5, 0, 327680, 5, 0, 131075, 5, 0)
 layer_3/name = "trees"
 layer_3/y_sort_enabled = true
 layer_3/z_index = 1
 layer_3/tile_data = PackedInt32Array(65536, 262145, 0, 65558, 262145, 0, 65538, 262145, 0, 65540, 262145, 3, 65542, 262145, 3, 65544, 262145, 0, 65546, 262145, 3, 65548, 262145, 3, 65550, 262145, 0, 65554, 262145, 3, 65556, 262145, 0, 196608, 262145, 0, 196620, 262145, 0, 589826, 262145, 0, 458756, 262145, 3, 720900, 262145, 0, 720898, 262145, 3, 720896, 262145, 0, 589824, 262145, 3, 458752, 262145, 3, 327694, 262145, 3, 327702, 262145, 0, 458774, 262145, 0, 589846, 262145, 3, 851968, 262145, 0, 851970, 262145, 3, 851972, 262145, 0, 851974, 262145, 0, 851980, 262145, 0, 851984, 262145, 0, 851986, 262145, 3, 851990, 262145, 0, 851988, 262145, 0, 327685, 1, 5, 327686, 131073, 5, 327687, 65537, 5, 327688, 196609, 5, 589845, 196609, 5, 589844, 65537, 5, 589843, 1, 5, 65552, 262145, 0, 262160, 1, 5, 262161, 65537, 5, 262162, 131073, 5, 262163, 196609, 5)
 script = ExtResource("7_tlsfh")
+
+[node name="Sign" parent="OverworldTilemap" instance=ExtResource("5_4hf4m")]
+position = Vector2(224, 128)
+
+[node name="UI" parent="." instance=ExtResource("5_ec2yf")]
+visible = false

@@ -24,6 +24,9 @@ var input_direction = Vector2(0, 0)
 var is_moving = false
 var percent_moved_to_next_tile = 0.0
 
+var can_interact = false
+var interactive_object
+
 func _ready():
 	anim_tree.active = true
 	initial_position = position
@@ -73,6 +76,9 @@ func process_player_input():
 			is_moving = true
 	else:
 		anim_state.travel("Idle")
+		if can_interact && Input.is_action_just_pressed("ui_accept"):
+			interactive_object.interact()
+			print_debug("Just interacted!")
 
 func need_to_turn():
 	var new_facing_direction
@@ -112,3 +118,17 @@ func move(delta):
 	else:
 		percent_moved_to_next_tile = 0.0
 		is_moving = false
+
+
+func _on_front_check_body_entered(body):
+	if body.has_method("interact"):
+		can_interact = true
+		interactive_object = body
+		print_debug("Interactive object here")
+
+
+func _on_front_check_body_exited(body):
+	if body.has_method("interact"):
+		can_interact = false
+		interactive_object = null
+		print_debug("Leaving interactive object")
